@@ -22,6 +22,8 @@ module.exports = function (config) {
   addTransforms(config);
   addShortcodes(config);
 
+  eleventyConfig.addPassthroughCopy("admin");
+
   // Extract and inline critical CSS in production
   // Documentation: https://github.com/gregives/eleventy-critical-css
   if (twelvety.env === "production") {
